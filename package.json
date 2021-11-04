@@ -1,0 +1,33 @@
+{
+  "name": "command-enhanced",
+  "version": "0.0.1",
+  "description": "一个可以丰富和enhance命令的工具",
+  "main": "./bin/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ducr/command-enhanced.git"
+  },
+  "bin": {
+    "command-enhanced": "./bin/index.js",
+    "cmd-e": "./bin/index.js"
+  },
+  "keywords": [
+    "command-enhanced"
+  ],
+  "author": "Ducr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ducr/command-enhanced/issues"
+  },
+  "homepage": "https://github.com/Ducr/command-enhanced#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^6.1.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "minimist": "^1.2.5",
+    "ora": "^5.1.0"
+  }
+}
