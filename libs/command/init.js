@@ -1,6 +1,5 @@
-const { path, os, childProcess } = require('../../libs/tools/module')
+const { path, os, childProcess, execa } = require('../../libs/tools/module')
 const { isExistsTargetDir, getTargetDirFiles, copyFilesToDestDir, ensureDestDir } = require('../../libs/tools/method')
-const exec = childProcess.exec
 
 // 初始化命令
 module.exports = async function () {
@@ -43,14 +42,6 @@ module.exports = async function () {
 
   // 执行脚本，使shell文件立即生效
   function executeScript(path) {
-    // exec(`source`, function (error, stdout, stderr) {
-    //   if (error) {
-    //     console.log('executeScript__err', error)        
-    //     process.exit()
-    //   } else {
-    //     console.log(`Init command-enhanced successfully!`)
-    //   }
-    //   process.exit()
-    // })
+    execa('source', ['~/.bashrc'])
   }
 }

@@ -27,6 +27,9 @@ const ora = require('ora')
 // 子进程模块，创建异步进程
 const childProcess = require('child_process')
 
+// 可以调用shell和本地外部程序的javascript封装 会启动子进程执行，支持多操作系统，包括windows 如果父进程退出，则生成的全部子进程都被杀死
+const execa = require('execa')
+
 // 页面输入框输入参数，使用这个工具可以自动提供提示信息，并且分步接收用户的输入，体验类似npm init时的一步一步输入参数的过程
 const prompt = require('co-prompt')
 
@@ -40,5 +43,6 @@ module.exports = {
   fse,
   ora,
   prompt,
-  childProcess
+  childProcess,
+  execa
 }
